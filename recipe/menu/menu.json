@@ -27,7 +27,7 @@
                         "Development",
                         "Science"
                     ],
-                    "command": ["gedit", "%F"],
+                    "command": ["{{ PREFIX }}/bin/pixi-editor-launcher.py", "%F"],
                     "MimeType": [
                         "text/x-pixi"
                     ]

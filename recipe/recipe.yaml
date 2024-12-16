@@ -8,7 +8,10 @@ build:
     - if: unix
       then:
         - mkdir -p $PREFIX/bin
-        - cp $RECIPE_DIR/../src/main.py $PREFIX/bin/pixi-editor-launcher.py
+        # first write the shebang, then the rest of the file
+        - echo "#!$PREFIX/bin/python" > $PREFIX/bin/pixi-editor-launcher.py
+        - cat $RECIPE_DIR/../src/main.py >> $PREFIX/bin/pixi-editor-launcher.py
+        - chmod +x $PREFIX/bin/pixi-editor-launcher.py
         - mkdir -p $PREFIX/Menu
         - cp $RECIPE_DIR/menu/menu.json $PREFIX/Menu/pixi-editor.json
         - cp $RECIPE_DIR/menu/pixi-icon.* $PREFIX/Menu/

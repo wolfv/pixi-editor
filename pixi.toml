@@ -11,5 +11,5 @@ start = "python ./src/main.py"
 
 [dependencies]
 pyqt = ">=5.15.9,<6"
-pyobjc-core = "*"
-pyobjc-framework-foundation = "*"
+# pyobjc-core = "*"
+# pyobjc-framework-foundation = "*"
