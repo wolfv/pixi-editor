@@ -1,0 +1,15 @@
+[project]
+authors = ["Wolf Vollprecht <w.vollprecht@gmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "pixi-editor"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+start = "python ./src/main.py"
+
+[dependencies]
+pyqt = ">=5.15.9,<6"
+pyobjc-core = "*"
+pyobjc-framework-foundation = "*"
